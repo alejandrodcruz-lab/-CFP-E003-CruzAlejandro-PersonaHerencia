@@ -28,8 +28,9 @@ public class archivos {
     public static void main(String[] args) {
 
         System.out.println("Iniciando escritura...");
-        File f = new File("numeros.txt");
+
         try {
+            File f = new File("numeros.txt");
             FileWriter fw = new FileWriter(f);
             PrintWriter pw = new PrintWriter(fw);
 
@@ -41,7 +42,7 @@ public class archivos {
 
             fw.close();
             System.out.println("Escritura finalizada");
-            
+
         } catch (IOException e) {
             System.out.println("Error");
         }
