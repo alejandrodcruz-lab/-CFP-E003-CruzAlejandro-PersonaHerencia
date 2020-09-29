@@ -28,12 +28,12 @@ en dicho archivo.
 public class archivos {
 
     public static void main(String[] args) {
-        
+
         escribirArchivo("hola.txt");
         leerArchivo("hola.txt");
         leerArchivo("chau");
     }
- 
+
     public static void escribirArchivo(String archivo) {
 
         try {
@@ -43,8 +43,8 @@ public class archivos {
 
             for (int i = 0; i < 20; i++) {
 
-                pw.println(i);
-                System.out.println("Escribiendo :"+i);
+                pw.println("Frase n°"+i);
+                System.out.println("Escribiendo Frase n°:" + i);
             }
 
             fw.close();
@@ -61,12 +61,12 @@ public class archivos {
             File f = new File(archivo);
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
-            String linea=br.readLine();
+            String linea = br.readLine();
 
-            while (linea!= null) {
+            while (linea != null) {
 
                 linea = br.readLine();
-                System.out.println("Leyendo :"+linea);
+                System.out.println("Leyendo :" + linea);
             }
             fr.close();
             System.out.println("Lectura finalizada");

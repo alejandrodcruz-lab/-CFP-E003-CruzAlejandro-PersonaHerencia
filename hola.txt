@@ -1,20 +1,20 @@
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
+Frase n°0
+Frase n°1
+Frase n°2
+Frase n°3
+Frase n°4
+Frase n°5
+Frase n°6
+Frase n°7
+Frase n°8
+Frase n°9
+Frase n°10
+Frase n°11
+Frase n°12
+Frase n°13
+Frase n°14
+Frase n°15
+Frase n°16
+Frase n°17
+Frase n°18
+Frase n°19
