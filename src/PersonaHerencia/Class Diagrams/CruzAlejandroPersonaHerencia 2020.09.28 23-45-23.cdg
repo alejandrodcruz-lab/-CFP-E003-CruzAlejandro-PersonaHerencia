@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CruzAlejandroPersonaHerencia">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="cruzalejandropersonaherencia" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="notas" type="ArrayList&lt;Float&gt;" visibility="private"/>
+        <Field name="p" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="long" name="d"/>
+          <Argument type="int" name="p"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setPadron" returnType="void" visibility="public">
+          <Argument type="int" name="p"/>
+        </Method>
+        <Method name="setNotas" returnType="void" visibility="public">
+          <Argument type="float" name="not"/>
+        </Method>
+        <Method name="getPadron" returnType="int" visibility="public"/>
+        <Method name="getPromedio" returnType="float" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Docente" package="cruzalejandropersonaherencia" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="l" type="int" visibility="private"/>
+        <Field name="ant" type="short" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="long" name="d"/>
+          <Argument type="int" name="l"/>
+          <Argument type="short" name="ant"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setLegajo" returnType="void" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+        <Method name="setAntiguedad" returnType="void" visibility="public">
+          <Argument type="short" name="ant"/>
+        </Method>
+        <Method name="getPadron" returnType="int" visibility="public"/>
+        <Method name="getLegajo" returnType="int" visibility="public"/>
+        <Method name="getAntiguedad" returnType="short" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="cruzalejandropersonaherencia" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="dni" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="long" name="d"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="a"/>
+        </Method>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="long" name="d"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="getDni" returnType="long" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UsoPersonaHerencia" package="cruzalejandropersonaherencia" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="POOPersona" package="poopersona" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="cruzalejandropersonaherencia.Docente" target="cruzalejandropersonaherencia.Persona"/>
+    <IsRelation name="is" source="cruzalejandropersonaherencia.Alumno" target="cruzalejandropersonaherencia.Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
