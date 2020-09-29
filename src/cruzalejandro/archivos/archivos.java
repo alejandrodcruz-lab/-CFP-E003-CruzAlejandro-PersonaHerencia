@@ -43,8 +43,8 @@ public class archivos {
 
             for (int i = 0; i < 20; i++) {
 
-                pw.println("Frase n°"+i);
-                System.out.println("Escribiendo Frase n°:" + i);
+                pw.println("Frase n°" + i);
+                System.out.println("Escribiendo Frase n:" + i);
             }
 
             fw.close();
@@ -61,15 +61,19 @@ public class archivos {
             File f = new File(archivo);
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
-            String linea = br.readLine();
+            String linea = null;
 
-            while (linea != null) {
-
+            do {
                 linea = br.readLine();
-                System.out.println("Leyendo :" + linea);
-            }
+                if (linea != null) {
+
+                    System.out.println("Leyendo :" + linea);
+                }
+            } while (linea != null);
+
             fr.close();
             System.out.println("Lectura finalizada");
+
         } catch (IOException e) {
             System.out.println("Error al leer un archivo");
         }
