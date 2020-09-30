@@ -31,6 +31,11 @@ public class archivos {
 
         escribirArchivo("hola.txt");
         leerArchivo("hola.txt");
+
+        escribirFraseArchivo("hola.txt", "Nota al final");
+        leerArchivo("hola.txt");
+
+        //Archivo que no existe
         leerArchivo("chau");
     }
 
@@ -46,6 +51,24 @@ public class archivos {
                 pw.println("Frase n°" + i);
                 System.out.println("Escribiendo Frase n:" + i);
             }
+
+            fw.close();
+            System.out.println("Escritura finalizada");
+
+        } catch (IOException e) {
+            System.out.println("Error al crear el archivo");
+        }
+    }
+
+    public static void escribirFraseArchivo(String archivo, String frase) {
+
+        try {
+            File f = new File(archivo);
+            FileWriter fw = new FileWriter(f, true);
+            PrintWriter pw = new PrintWriter(fw);
+
+            pw.println("Frase :" + frase);
+            System.out.println("Escribiendo Frase :" + frase);
 
             fw.close();
             System.out.println("Escritura finalizada");
